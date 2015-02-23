@@ -1,0 +1,8 @@
+<h1> <%= @user.first_name + " " +@user.last_name %></h1>
+</br>
+<%= @user.email %>
+</br>
+<%= @user.trips %>
+</br>
+<button type= "button"> <%= link_to "Delete", user_path(u), method: :delete, data: { confirm: "Are you sure??"}%></button>
+<button type = "button"> <%= link_to "Edit", edit_user_path(u) %></button>

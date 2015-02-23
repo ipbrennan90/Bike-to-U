@@ -1,0 +1,17 @@
+<h1> Users Page</h1>
+<h2> <%= link_to "New User", new_user_path %> </h2>
+<%@users.each do |u| %>
+
+</br>
+
+
+<%= u.first_name + " " + u.last_name %>
+
+</br>
+
+<%= u.email %>
+</br>
+<%= u.trip %>
+</br>
+<button type= "button"> <%= link_to "Delete", user_path(u), method: :delete, data: { confirm: "Are you sure??"}%></button>
+<button type = "button"> <%= link_to "Edit", edit_user_path(u) %></button>
